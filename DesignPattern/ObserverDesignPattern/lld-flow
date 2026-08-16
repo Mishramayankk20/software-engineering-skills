@@ -1,0 +1,9 @@
+Here's the low-level class diagram (LLD) for this Observer-pattern project — showing the interfaces, implementing classes, and their relationships.
+
+Reading the diagram:
+
+Dashed arrows with hollow triangle (<|..) = "implements" — NotificationService implements Subject; the three subscribers implement Observer
+Hollow diamond line (o--) = "has-a" (aggregation) — NotificationService holds a list of Observer references, not knowing their concrete type
+Dotted arrow (..>) = "depends on / creates" — NotificationDemo (your main method) is the one place that wires everything together by creating concrete subscribers and registering them
+
+This is the whole point of Observer: NotificationService only ever talks to the Observer interface, never to EmailSubscriber or SmsSubscriber directly. That's what lets you add a new subscriber type later without touching NotificationService.java at all.
