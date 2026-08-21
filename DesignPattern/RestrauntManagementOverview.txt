@@ -1,0 +1,13 @@
+# Restaurant Management System – Project Overview
+
+The **Restaurant Management System** is designed to simplify and manage the process of creating customer orders, generating bills, and applying discounts in an organized and flexible way. The project demonstrates the practical use of several **object-oriented design patterns**, including the **Strategy, Observer, Factory, and Decorator patterns**.
+
+The **Factory Pattern** is used to create appropriate objects based on the selected menu item. Instead of creating menu-item objects directly, the factory determines which type of object needs to be created. This makes object creation easier to manage and allows new menu items to be added without significantly changing the existing code.
+
+The **Strategy Pattern** is used for handling different discount policies. Since a restaurant may have different types of discounts, such as percentage-based discounts, fixed discounts, or special customer offers, each discount calculation can be implemented as a separate strategy. The billing system can then select the required discount strategy dynamically without changing the main billing logic.
+
+The **Decorator Pattern** is used to add additional features or charges to an order dynamically. For example, additional toppings, extra services, packaging charges, or other optional items can be added to an existing order without modifying the original order class. This provides flexibility while keeping the system modular.
+
+The **Observer Pattern** is used to notify different components when an important event occurs, such as an order being created or its status being updated. Different observers can respond to these changes independently. For example, a kitchen or notification component can be informed when a new order is placed.
+
+Overall, the project demonstrates how design patterns can be combined to create a **modular, maintainable, and extensible restaurant management system**. By separating object creation, discount calculation, order modifications, and event notifications, the system becomes easier to understand, test, and extend with new functionality.
