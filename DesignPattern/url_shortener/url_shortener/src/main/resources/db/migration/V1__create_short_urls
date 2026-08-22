@@ -1,0 +1,9 @@
+CREATE TABLE short_urls (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    short_code VARCHAR(20) NOT NULL,
+    original_url VARCHAR(2048) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_short_code (short_code)
+);
