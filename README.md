@@ -1,8 +1,9 @@
-# software-engineering-skills
-
 ### 🍃 Java & Spring Projects
+
 | **Project** | **Description** | **Stack** |
-|---|---|---|
+| --- | --- | --- |
 | [Spring REST](https://github.com/Mishramayankk20/software-engineering-skills/blob/main/README.md#) | Standard REST API implementation demonstrating Spring Boot fundamentals. | Spring Boot, REST |
-| [Order & Cart Microservices](https://github.com/Mishramayankk20/software-engineering-skills/blob/main/README.md#) | Two Spring Boot microservices — cart-service and order-service — registered with Consul for service discovery. order-service calls cart-service via a Feign client with circuit-breaker fallback. | Spring Boot, Consul, OpenFeign, Resilience4j, MySQL, Swagger |
+| [Order & Cart Microservices](https://github.com/Mishramayankk20/software-engineering-skills/blob/main/README.md#) | Two Spring Boot microservices — cart-service and order-service — registered with Consul for service discovery. `order-service` calls `cart-service` via a Feign client with circuit-breaker fallback. | Spring Boot, Consul, OpenFeign, Resilience4j, MySQL, Swagger |
 | [Restaurant Management System](https://github.com/Mishramayankk20/software-engineering-skills/blob/main/README.md#) | Restaurant management application demonstrating **Strategy, Observer, Factory, and Decorator design patterns** for order creation, menu-item object creation, bill generation, and dynamic discount handling. | Java, OOP, Design Patterns |
+| **Rate Limiter** | Basic in-memory rate limiter designed using the **Token Bucket algorithm**. Implements request interception through a Spring Boot filter, client-specific token buckets using `ConcurrentHashMap`, and thread-safe token consumption. Includes **HLD and LLD diagrams designed using draw.io** covering the request flow, component architecture, and internal class design. | Java, Spring Boot, Token Bucket, ConcurrentHashMap, LLD, HLD, draw.io |
+| **URL Shortener** | Basic URL shortening service designed with a focus on **HLD and LLD principles**. Includes system architecture and low-level design diagrams created using **draw.io**, covering URL creation, short-code generation, redirection flow, and core component interactions. | Java, Spring Boot, REST, LLD, HLD, draw.io |
