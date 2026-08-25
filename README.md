@@ -19,8 +19,8 @@ The repository focuses on:
 ## Tech Stack
 
 Java • Spring Boot • Spring MVC • REST • MySQL
-OpenFeign • Consul • Resilience4j • Swagger
-JUnit • Maven • Git
+• OpenFeign • Consul • Resilience4j • Swagger
+• JUnit • Maven • Git
 
 ## Projects
 
