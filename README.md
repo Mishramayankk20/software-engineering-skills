@@ -79,8 +79,6 @@ Demonstrates:
 Architecture diagrams and HLD/LLD documentation are included
 for selected projects.
 
-## How to Run
-
 ...
 
 ## Author
