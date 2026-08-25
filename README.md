@@ -1,9 +1,90 @@
-### 🍃 Java & Spring Projects
+# Java Backend Engineering
 
-| **Project** | **Description** | **Stack** |
-| --- | --- | --- |
-| [Spring REST](https://github.com/Mishramayankk20/software-engineering-skills/blob/main/README.md#) | Standard REST API implementation demonstrating Spring Boot fundamentals. | Spring Boot, REST |
-| [Order & Cart Microservices](https://github.com/Mishramayankk20/software-engineering-skills/blob/main/README.md#) | Two Spring Boot microservices — cart-service and order-service — registered with Consul for service discovery. `order-service` calls `cart-service` via a Feign client with circuit-breaker fallback. | Spring Boot, Consul, OpenFeign, Resilience4j, MySQL, Swagger |
-| [Restaurant Management System](https://github.com/Mishramayankk20/software-engineering-skills/blob/main/README.md#) | Restaurant management application demonstrating **Strategy, Observer, Factory, and Decorator design patterns** for order creation, menu-item object creation, bill generation, and dynamic discount handling. | Java, OOP, Design Patterns |
-| **Rate Limiter** | Basic in-memory rate limiter designed using the **Token Bucket algorithm**. Implements request interception through a Spring Boot filter, client-specific token buckets using `ConcurrentHashMap`, and thread-safe token consumption. Includes **HLD and LLD diagrams designed using draw.io** covering the request flow, component architecture, and internal class design. | Java, Spring Boot, Token Bucket, ConcurrentHashMap, LLD, HLD, draw.io |
-| **URL Shortener** | Basic URL shortening service designed with a focus on **HLD and LLD principles**. Includes system architecture and low-level design diagrams created using **draw.io**, covering URL creation, short-code generation, redirection flow, and core component interactions. | Java, Spring Boot, REST, LLD, HLD, draw.io |
+A collection of production-oriented backend projects built with
+Java and Spring Boot.
+
+The repository focuses on:
+
+- REST API design
+- Microservices architecture
+- Service discovery
+- Inter-service communication
+- Fault tolerance
+- Rate limiting
+- Database design
+- Design patterns
+- HLD / LLD
+- Clean and maintainable backend code
+
+## Tech Stack
+
+Java • Spring Boot • Spring MVC • REST • MySQL
+OpenFeign • Consul • Resilience4j • Swagger
+JUnit • Maven • Git
+
+## Projects
+
+### 1. Order & Cart Microservices ⭐
+
+Java | Spring Boot | MySQL | Consul | OpenFeign | Resilience4j
+
+Two independent microservices communicating through
+service discovery and REST.
+
+Key engineering concepts:
+
+- Service discovery using Consul
+- Inter-service communication using OpenFeign
+- Circuit breaker and fallback using Resilience4j
+- REST API design
+- Database persistence
+- API documentation using Swagger
+
+[View Project](...)
+
+### 2. Rate Limiter
+
+Java | Spring Boot | Token Bucket | ConcurrentHashMap
+
+Implemented an in-memory rate limiter using the Token Bucket
+algorithm.
+
+Engineering concepts:
+
+- Concurrency
+- Thread safety
+- Request interception
+- Token bucket algorithm
+- HLD / LLD
+
+### 3. URL Shortener
+
+Java | Spring Boot | REST
+
+Designed a URL shortening service with HLD and LLD documentation.
+
+### 4. Restaurant Management System
+
+Java | OOP | Design Patterns
+
+Demonstrates:
+
+- Strategy Pattern
+- Observer Pattern
+- Factory Pattern
+- Decorator Pattern
+
+## Architecture
+
+Architecture diagrams and HLD/LLD documentation are included
+for selected projects.
+
+## How to Run
+
+...
+
+## Author
+
+Mayank Mishra
+
+Software Engineer | Java | Spring Boot | Microservices
