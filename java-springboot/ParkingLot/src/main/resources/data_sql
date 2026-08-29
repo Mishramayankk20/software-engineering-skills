@@ -1,0 +1,101 @@
+INSERT INTO parking_lots (name)
+SELECT 'Main Parking Lot'
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM parking_lots
+    WHERE name = 'Main Parking Lot'
+);
+
+INSERT INTO parking_floors (floor_number, parking_lot_id)
+SELECT 1, id
+FROM parking_lots
+WHERE name = 'Main Parking Lot'
+  AND NOT EXISTS (
+      SELECT 1
+      FROM parking_floors
+      WHERE floor_number = 1
+        AND parking_lot_id = parking_lots.id
+  );
+
+INSERT INTO parking_floors (floor_number, parking_lot_id)
+SELECT 2, id
+FROM parking_lots
+WHERE name = 'Main Parking Lot'
+  AND NOT EXISTS (
+      SELECT 1
+      FROM parking_floors
+      WHERE floor_number = 2
+        AND parking_lot_id = parking_lots.id
+  );
+
+INSERT INTO parking_spots
+    (spot_number, spot_type, occupied, parking_floor_id)
+SELECT 1, 'CAR', false, id
+FROM parking_floors
+WHERE floor_number = 1
+  AND NOT EXISTS (
+      SELECT 1
+      FROM parking_spots
+      WHERE spot_number = 1
+        AND parking_floor_id = parking_floors.id
+  );
+
+INSERT INTO parking_spots
+    (spot_number, spot_type, occupied, parking_floor_id)
+SELECT 2, 'CAR', false, id
+FROM parking_floors
+WHERE floor_number = 1
+  AND NOT EXISTS (
+      SELECT 1
+      FROM parking_spots
+      WHERE spot_number = 2
+        AND parking_floor_id = parking_floors.id
+  );
+
+INSERT INTO parking_spots
+    (spot_number, spot_type, occupied, parking_floor_id)
+SELECT 3, 'BIKE', false, id
+FROM parking_floors
+WHERE floor_number = 1
+  AND NOT EXISTS (
+      SELECT 1
+      FROM parking_spots
+      WHERE spot_number = 3
+        AND parking_floor_id = parking_floors.id
+  );
+
+INSERT INTO parking_spots
+    (spot_number, spot_type, occupied, parking_floor_id)
+SELECT 4, 'CAR', false, id
+FROM parking_floors
+WHERE floor_number = 2
+  AND NOT EXISTS (
+      SELECT 1
+      FROM parking_spots
+      WHERE spot_number = 4
+        AND parking_floor_id = parking_floors.id
+  );
+
+INSERT INTO parking_spots
+    (spot_number, spot_type, occupied, parking_floor_id)
+SELECT 5, 'BIKE', false, id
+FROM parking_floors
+WHERE floor_number = 2
+  AND NOT EXISTS (
+      SELECT 1
+      FROM parking_spots
+      WHERE spot_number = 5
+        AND parking_floor_id = parking_floors.id
+  );
+
+INSERT INTO parking_spots
+    (spot_number, spot_type, occupied, parking_floor_id)
+SELECT 6, 'TRUCK', false, id
+FROM parking_floors
+WHERE floor_number = 2
+  AND NOT EXISTS (
+      SELECT 1
+      FROM parking_spots
+      WHERE spot_number = 6
+        AND parking_floor_id = parking_floors.id
+  );
